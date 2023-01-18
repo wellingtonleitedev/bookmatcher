@@ -1,4 +1,4 @@
-import { createStitches, ScaleValue } from '@stitches/react';
+import { createStitches, ScaleValue } from "@stitches/react";
 import { Roboto } from "@next/font/google";
 
 const roboto = Roboto({
@@ -30,6 +30,7 @@ export const { styled, getCssText, globalCss } = createStitches({
       "8": "0.5rem",
       "12": "0.75rem",
       "16": "1rem",
+      "20": "1.25rem",
       "24": "1.5rem",
       "32": "2rem",
     },

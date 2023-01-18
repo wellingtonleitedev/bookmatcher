@@ -1,7 +1,21 @@
 import Head from 'next/head'
-import { Home } from './home';
+import Book from "../assets/images/book.jpeg";
+import  { BookList, Input } from "../components";
 
 export default function App() {
+  const books = [
+    { id: 1, title: "Clean Code", img: Book },
+    { id: 2, title: "Clean Code", img: Book },
+    { id: 3, title: "Clean Code", img: Book },
+    { id: 4, title: "Clean Code", img: Book },
+    { id: 5, title: "Clean Code", img: Book },
+    { id: 6, title: "Clean Code", img: Book },
+    { id: 7, title: "Clean Code", img: Book },
+    { id: 8, title: "Clean Code", img: Book },
+    { id: 9, title: "Clean Code", img: Book },
+    { id: 10, title: "Clean Code", img: Book },
+  ];
+
   return (
     <>
       <Head>
@@ -10,7 +24,24 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Home />
+      <main style={{ padding: '2rem' }}>
+        <h1>Book Match</h1>
+        <Input name="search" placeholder="Search" />
+        <div>
+          <h3>categories</h3>
+          <ul style={{ display: "flex", gap: 20 }}>
+            <li>frontend</li>
+            <li>backend</li>
+            <li>devops</li>
+            <li>design</li>
+            <li>ux</li>
+          </ul>
+        </div>
+        <div>
+          <BookList books={books} category="Top 10" ranked />
+          <BookList books={books} category="Recommended for you" />
+        </div>
+      </main>
     </>
   );
 }

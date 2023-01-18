@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import { Wrapper } from './Input.style';
 
-const Input: React.FC = () => {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+
+const Input: React.FC<InputProps> = ({...props}) => {
   return (
-    <Wrapper name="search" placeholder="search" />
+    <Wrapper {...props} />
   );
 }
 
