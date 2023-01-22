@@ -1,53 +1,69 @@
-import React from 'react';
-import Image from 'next/image';
-import { List } from './Categories.style';
+import React from "react";
+import Image from "next/image";
+import { List } from "./Categories.style";
 
-import FrontIcon from '../../assets/icons/front-end.png'
-import BackIcon from '../../assets/icons/backend.png'
-import DevOpsIcon from '../../assets/icons/devops.png'
-import DBAIcon from '../../assets/icons/database.png'
-import QAIcon from '../../assets/icons/testing.png'
+import FrontIcon from "../../assets/icons/front-end.png";
+import BackIcon from "../../assets/icons/backend.png";
+import DevOpsIcon from "../../assets/icons/devops.png";
+import DBAIcon from "../../assets/icons/database.png";
+import QAIcon from "../../assets/icons/testing.png";
 import ArchIcon from "../../assets/icons/architecture.png";
-import SecurityIcon from '../../assets/icons/cyber-security.png'
+import SecurityIcon from "../../assets/icons/cyber-security.png";
 import UXIcon from "../../assets/icons/ux.png";
 
 const Categories: React.FC = () => {
   return (
-    <List>
+    <List className="u-hide-scrollbar" >
       <li>
-        <Image src={FrontIcon} alt="13" width={45} height={45} priority />
-        Front-end
+        <figure>
+          <Image src={FrontIcon} alt="" />
+        </figure>
+        <figcaption>Front-end</figcaption>
       </li>
       <li>
-        <Image src={BackIcon} alt="13" width={45} height={45} priority />
-        Back-end
+        <figure>
+          <Image src={BackIcon} alt="" />
+        </figure>
+        <figcaption>Back-end</figcaption>
       </li>
       <li>
-        <Image src={DevOpsIcon} alt="13" width={45} height={45} priority />
-        DevOps
+        <figure>
+          <Image src={DevOpsIcon} alt="" />
+        </figure>
+        <figcaption>DevOps</figcaption>
       </li>
       <li>
-        <Image src={DBAIcon} alt="13" width={45} height={45} priority />
-        DBA
+        <figure>
+          <Image src={DBAIcon} alt="" />
+        </figure>
+        <figcaption>DBA</figcaption>
       </li>
       <li>
-        <Image src={QAIcon} alt="13" width={45} height={45} priority />
-        QA
+        <figure>
+          <Image src={QAIcon} alt="" />
+        </figure>
+        <figcaption>QA</figcaption>
       </li>
       <li>
-        <Image src={ArchIcon} alt="13" width={45} height={45} priority />
-        Architecture
+        <figure>
+          <Image src={ArchIcon} alt="" />
+        </figure>
+        <figcaption>Architecture</figcaption>
       </li>
       <li>
-        <Image src={SecurityIcon} alt="13" width={45} height={45} priority />
-        Cyber Security
+        <figure>
+          <Image src={SecurityIcon} alt="" />
+        </figure>
+        <figcaption>Cyber Security</figcaption>
       </li>
       <li>
-        <Image src={UXIcon} alt="13" width={45} height={45} priority />
-        UX/UI
+        <figure>
+          <Image src={UXIcon} alt="" />
+        </figure>
+        <figcaption>UX/UI</figcaption>
       </li>
     </List>
   );
-}
+};
 
 export default Categories;

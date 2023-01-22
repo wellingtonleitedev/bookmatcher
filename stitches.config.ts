@@ -33,9 +33,10 @@ export const { styled, getCssText, globalCss } = createStitches({
       "20": "1.25rem",
       "24": "1.5rem",
       "32": "2rem",
+      "64": "4rem",
     },
     radii: {
-      full: "99999px",
+      full: "6250rem",
       default: "0.3125rem",
     },
     fonts: {
@@ -51,5 +52,18 @@ export const { styled, getCssText, globalCss } = createStitches({
       paddingTop: value,
       paddingBottom: value,
     }),
+    maxSize: (value: ScaleValue<"space">) => ({
+      maxHeight: value,
+      maxWidth: value,
+    }),
+    minSize: (value: ScaleValue<"space">) => ({
+      minHeight: value,
+      minWidth: value,
+    }),
+  },
+  media: {
+    bp1: "(min-width: 640px)",
+    bp2: "(min-width: 768px)",
+    bp3: "(min-width: 1024px)",
   },
 });

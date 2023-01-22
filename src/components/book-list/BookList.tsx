@@ -1,6 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { List } from "./BookList.style";
+import { Container, List } from "./BookList.style";
+import Title from "../title/Title";
 
 interface IBook {
   id: number;
@@ -16,26 +17,20 @@ interface BookListProps {
 
 const BookList: React.FC<BookListProps> = ({ books, category, ranked }) => {
   return (
-    <>
-      <h3>{category}</h3>
-      <List type={ranked ? 'ranked' : 'default'} >
+    <Container>
+      <Title as="h2">{category}</Title>
+      <List type={ranked ? "ranked" : "default"} className="u-hide-scrollbar">
         {books.map((book, index) => (
           <li key={book.id}>
             {ranked && <span>{index + 1}</span>}
             <figure>
-              <Image
-                src={book.img}
-                alt="13"
-                width={200}
-                height={200}
-                priority
-              />
+              <Image src={book.img} alt="" width={200} height={200} priority />
               <figcaption>{book.title}</figcaption>
             </figure>
           </li>
         ))}
       </List>
-    </>
+    </Container>
   );
 };
 

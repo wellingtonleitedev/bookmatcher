@@ -1,5 +1,9 @@
 import { styled } from "../../../stitches.config";
 
+export const Container = styled("div", {
+  paddingY: '$16',
+})
+
 export const List = styled("ul", {
   display: "flex",
   gap: "$32",
@@ -24,7 +28,7 @@ export const List = styled("ul", {
         padding: '$0',
       },
       ranked: {
-        paddingY: '$32',
+        paddingTop: '$32',
         paddingLeft: '$20',
       }
     }

@@ -19,5 +19,9 @@ export const globalStyles = globalCss({
   },
   ul: {
     listStyle: 'none',
-  }
+  },
+  '.u-hide-scrollbar::-webkit-scrollbar, .u-hide-scrollbar::-webkit-scrollbar': {
+    display: "none",
+    scrollbarWidth: 'none',
+  },
 });

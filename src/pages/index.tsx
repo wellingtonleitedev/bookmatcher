@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Book from "../assets/images/book.jpeg";
-import  { BookList, Categories, Input } from "../components";
+import  { BookList, Categories, Header } from "../components";
 
 export default function App() {
   const books = [
@@ -24,12 +24,11 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main style={{ padding: '4rem', maxWidth: '90rem' }}>
-        <h1>Book Match</h1>
-        <Input name="search" placeholder="Search" />
-        <Categories />
+      <main style={{ padding: '1rem', maxWidth: '90rem' }}>
+        <Header />
         <section>
           <BookList books={books} category="Top 10" ranked />
+          <Categories />
           <BookList books={books} category="Recommended for you" />
         </section>
       </main>
