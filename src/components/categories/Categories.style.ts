@@ -1,4 +1,4 @@
-import { styled } from '../../../stitches.config'
+import { styled } from '@/stitches.config'
 
 export const List = styled("ul", {
   display: "flex",
@@ -15,7 +15,7 @@ export const List = styled("ul", {
     minWidth: "$space$64",
 
     figure: {
-      backgroundColor: "$text",
+      backgroundColor: "$primary",
       borderRadius: "$full",
       maxSize: "3rem",
       padding: "$8",

@@ -2,14 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { List } from "./Categories.style";
 
-import FrontIcon from "../../assets/icons/front-end.png";
-import BackIcon from "../../assets/icons/backend.png";
-import DevOpsIcon from "../../assets/icons/devops.png";
-import DBAIcon from "../../assets/icons/database.png";
-import QAIcon from "../../assets/icons/testing.png";
-import ArchIcon from "../../assets/icons/architecture.png";
-import SecurityIcon from "../../assets/icons/cyber-security.png";
-import UXIcon from "../../assets/icons/ux.png";
+import FrontIcon from "@/app/assets/icons/front-end.png";
+import BackIcon from "@/app/assets/icons/backend.png";
+import DevOpsIcon from "@/app/assets/icons/devops.png";
+import DBAIcon from "@/app/assets/icons/database.png";
+import QAIcon from "@/app/assets/icons/testing.png";
+import ArchIcon from "@/app/assets/icons/architecture.png";
+import SecurityIcon from "@/app/assets/icons/cyber-security.png";
+import UXIcon from "@/app/assets/icons/ux.png";
 
 const Categories: React.FC = () => {
   return (
