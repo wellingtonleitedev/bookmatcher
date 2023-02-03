@@ -1,13 +1,29 @@
-import React from 'react';
-import { Input } from '../';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { Input } from "../";
+import { HeaderWrapper } from "./Header.style";
+
+interface IFormInput {
+  search: string;
+}
 
 const Header: React.FC = () => {
+  const { register, handleSubmit } = useForm<IFormInput>();
+
+  const onSubmit = (values: { search: string }) => {
+    console.log({ values });
+  };
+
   return (
-    <header>
-      <h1>Book Match</h1>
-      <Input name="search" placeholder="Search" />
-    </header>
+    <HeaderWrapper>
+      <section>
+        <h1>Book Matcher</h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Input name="search" register={register} placeholder="Name of a book"/>
+        </form>
+      </section>
+    </HeaderWrapper>
   );
-}
+};
 
 export default Header;
