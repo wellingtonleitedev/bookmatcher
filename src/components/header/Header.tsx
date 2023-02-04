@@ -19,7 +19,10 @@ const Header: React.FC = () => {
       <section>
         <h1>Book Matcher</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Input name="search" register={register} placeholder="Name of a book"/>
+          <Input
+            placeholder="Name of a book"
+            {...register("search")}
+          />
         </form>
       </section>
     </HeaderWrapper>
