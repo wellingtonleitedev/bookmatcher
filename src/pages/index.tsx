@@ -1,7 +1,21 @@
 import Head from 'next/head'
-import { Home } from './home';
+import Book from "../assets/images/book.jpeg";
+import  { BookList, Categories, Header } from "../components";
 
 export default function App() {
+  const books = [
+    { id: 1, title: "Clean Code", img: Book },
+    { id: 2, title: "Clean Code", img: Book },
+    { id: 3, title: "Clean Code", img: Book },
+    { id: 4, title: "Clean Code", img: Book },
+    { id: 5, title: "Clean Code", img: Book },
+    { id: 6, title: "Clean Code", img: Book },
+    { id: 7, title: "Clean Code", img: Book },
+    { id: 8, title: "Clean Code", img: Book },
+    { id: 9, title: "Clean Code", img: Book },
+    { id: 10, title: "Clean Code", img: Book },
+  ];
+
   return (
     <>
       <Head>
@@ -10,7 +24,14 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Home />
+      <main style={{ padding: '1rem', maxWidth: '90rem' }}>
+        <Header />
+        <section>
+          <BookList books={books} category="Top 10" ranked />
+          <Categories />
+          <BookList books={books} category="Recommended for you" />
+        </section>
+      </main>
     </>
   );
 }

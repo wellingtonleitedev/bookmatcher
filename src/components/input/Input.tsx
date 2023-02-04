@@ -1,10 +1,11 @@
-import React from 'react';
-import { Wrapper } from './Input.style';
+import React, { InputHTMLAttributes } from "react";
+import { Wrapper } from "./Input.style";
 
-const Input: React.FC = () => {
-  return (
-    <Wrapper name="search" placeholder="search" />
-  );
-}
+const Input: React.ForwardRefRenderFunction<
+  HTMLInputElement,
+  InputHTMLAttributes<HTMLInputElement>
+> = ({ ...props }, ref) => {
+  return <Wrapper ref={ref} {...props} />;
+};
 
-export default Input;
+export default React.forwardRef(Input);
