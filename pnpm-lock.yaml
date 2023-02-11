@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@hookform/resolvers': ^2.9.10
   '@next/font': 13.1.0
+  '@radix-ui/colors': ^0.1.8
   '@stitches/react': ^1.2.8
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.4.0
@@ -24,6 +25,7 @@ specifiers:
 dependencies:
   '@hookform/resolvers': 2.9.10_react-hook-form@7.43.0
   '@next/font': 13.1.0
+  '@radix-ui/colors': 0.1.8
   '@stitches/react': 1.2.8_react@18.2.0
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -877,6 +879,10 @@ packages:
       picocolors: 1.0.0
       tiny-glob: 0.2.9
       tslib: 2.4.1
+    dev: false
+
+  /@radix-ui/colors/0.1.8:
+    resolution: {integrity: sha512-jwRMXYwC0hUo0mv6wGpuw254Pd9p/R6Td5xsRpOmaWkUHlooNWqVcadgyzlRumMq3xfOTXwJReU0Jv+EIy4Jbw==}
     dev: false
 
   /@rushstack/eslint-patch/1.2.0:

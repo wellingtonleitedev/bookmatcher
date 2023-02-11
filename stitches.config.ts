@@ -1,3 +1,12 @@
+import {
+  grayDark,
+  sky,
+  green,
+  yellow,
+  red,
+  blue,
+} from "@radix-ui/colors";
+
 import { createStitches, ScaleValue } from "@stitches/react";
 import { Roboto } from "@next/font/google";
 
@@ -9,19 +18,21 @@ const roboto = Roboto({
 export const { styled, getCssText, globalCss } = createStitches({
   theme: {
     colors: {
-      primary: `#D73628`,
-      primaryLight: `#FC4737`,
-      primaryDark: `#AD1E12 `,
+      primary: sky.sky3,
+      primaryLight: sky.sky4,
+      primaryDark: sky.sky9,
+      active: sky.sky5,
+      border: sky.sky6,
+      borderLight: sky.sky8,
 
-      background: `#2F2F33`,
+      background: grayDark.gray2,
+      title: grayDark.gray12,
+      text: grayDark.gray11,
 
-      title: `#E1E1E6`,
-      text: `#C4C4CC`,
-
-      shape: `#29292E`,
-      // Outros exemplos
-      // placeholder: '',
-      // support: '',
+      success: green.green1,
+      warning: yellow.yellow1,
+      danger: red.red1,
+      info: blue.blue1,
     },
     space: {
       "0": "0rem",
