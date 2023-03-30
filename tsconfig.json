@@ -16,9 +16,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/app/*": ["./src/*"]
-    }
+      "@/stitches": ["./stitches.config"],
+      "@/styles/*": ["./styles/*"],
+      "@/*": ["./src/*"]
+    },
+    "isolatedModules": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

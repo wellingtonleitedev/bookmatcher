@@ -1,13 +1,8 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
-import { Container, List } from "./BookList.style";
+import Image from "next/image";
+import { IBook } from "@/types/book.types";
 import Title from "../title/Title";
-
-interface IBook {
-  id: number;
-  img: StaticImageData | string;
-  title: string;
-}
+import { Container, List } from "./BookList.style";
 
 interface BookListProps {
   books: IBook[];
@@ -24,7 +19,13 @@ const BookList: React.FC<BookListProps> = ({ books, category, ranked }) => {
           <li key={book.id}>
             {ranked && <span>{index + 1}</span>}
             <figure>
-              <Image src={book.img} alt="" width={200} height={200} priority />
+              <Image
+                src={book.thumbnail}
+                alt=""
+                width={150}
+                height={150}
+                priority
+              />
               <figcaption>{book.title}</figcaption>
             </figure>
           </li>

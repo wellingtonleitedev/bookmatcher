@@ -1,13 +1,13 @@
-import { styled } from "@/stitches.config";
+import { styled } from "@/stitches";
 
 export const Container = styled("div", {
-  paddingY: '$16',
-})
+  paddingY: "$16",
+});
 
 export const List = styled("ul", {
   display: "flex",
   gap: "$32",
-  overflowX: 'scroll',
+  overflowX: "scroll",
 
   li: {
     display: "flex",
@@ -25,12 +25,12 @@ export const List = styled("ul", {
   variants: {
     type: {
       default: {
-        padding: '$0',
+        padding: "$0",
       },
       ranked: {
-        paddingTop: '$32',
-        paddingLeft: '$20',
-      }
-    }
-  }
+        paddingTop: "$32",
+        paddingLeft: "$20",
+      },
+    },
+  },
 });

@@ -1,5 +1,5 @@
-import { styled } from '@/stitches.config'
+import { styled } from "@/stitches";
 
-export const TitleWrapper = styled('h1', {
-  paddingBottom: '$16',
+export const TitleWrapper = styled("h1", {
+  paddingBottom: "$16",
 });

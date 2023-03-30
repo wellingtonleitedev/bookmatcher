@@ -1,4 +1,4 @@
-import { globalCss } from "../stitches.config";
+import { globalCss } from "@/stitches";
 
 export const globalStyles = globalCss({
   "*": {
@@ -18,10 +18,16 @@ export const globalStyles = globalCss({
     color: `$title`,
   },
   ul: {
-    listStyle: 'none',
+    listStyle: "none",
   },
-  '.u-hide-scrollbar::-webkit-scrollbar, .u-hide-scrollbar::-webkit-scrollbar': {
-    display: "none",
-    scrollbarWidth: 'none',
+  ".app-container": {
+    margin: "auto",
+    maxWidth: "70rem",
+    padding: "1rem",
   },
+  ".u-hide-scrollbar::-webkit-scrollbar, .u-hide-scrollbar::-webkit-scrollbar":
+    {
+      display: "none",
+      scrollbarWidth: "none",
+    },
 });

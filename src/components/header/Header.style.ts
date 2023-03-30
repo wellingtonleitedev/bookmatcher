@@ -1,9 +1,6 @@
-import { styled } from "@/stitches.config"
+import { styled } from "@/stitches";
 
 export const HeaderWrapper = styled("header", {
-  section: {
-    margin: "auto",
-    maxWidth: "90rem",
-    padding: "1rem",
-  }
+  padding: "1rem",
+  textAlign: "center",
 });

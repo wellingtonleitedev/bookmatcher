@@ -1,7 +1,7 @@
-import { styled } from "@/stitches.config";
+import { styled } from "@/stitches";
 
-export const Wrapper = styled('input', {
+export const Wrapper = styled("input", {
   borderRadius: 10,
   padding: 10,
   width: "100%",
-})
+});
