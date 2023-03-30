@@ -8,11 +8,15 @@ export interface IFormInput {
   search: string;
 }
 
+interface ISearchFormProps {
+  onSubmit: (values: IFormInput) => void;
+}
+
 const formSchema = z.object({
   search: z.string().min(3).trim(),
 });
 
-const SearchForm: React.FC = () => {
+const SearchForm: React.FC<ISearchFormProps> = ({ onSubmit }) => {
   const {
     register,
     handleSubmit,
@@ -20,10 +24,6 @@ const SearchForm: React.FC = () => {
   } = useForm<IFormInput>({
     resolver: zodResolver(formSchema),
   });
-
-  const onSubmit = (values: { search: string }) => {
-    console.log({ values });
-  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

@@ -1,9 +1,9 @@
-import { styled } from '@/stitches.config'
+import { styled } from "@/stitches";
 
 export const List = styled("ul", {
   display: "flex",
   gap: "$16",
-  justifyContent: 'space-between',
+  justifyContent: "space-between",
   paddingY: "$16",
   overflow: "scroll",
 
